@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     var brookButton = document.getElementById("brookbutton");
     
     brookButton.addEventListener('click', function () {
-    
+        audioCtx.resume()
         /*if (!audioCtx) {
             initAudio_brook();
             return;
@@ -331,6 +331,8 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     //document.getElementById("shadingToggle").addEventListener("change", renderBellPad);
     
     bellPad.addEventListener('mousedown', function (e) {
+        audioCtx.resume()
+        
         renderBellPad(true);
         
         var rect = bellPad.getBoundingClientRect();
