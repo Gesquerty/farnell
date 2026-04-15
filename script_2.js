@@ -413,3 +413,10 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     
     }, false);*/
 });
+
+// One-liner to resume playback when user interacted with the page.
+document.querySelector('button').addEventListener('click', function() {
+  audioCtx.resume().then(() => {
+    console.log('Playback resumed successfully');
+  });
+});
